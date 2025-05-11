@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gmail Send As Tutorial</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+        background-color: #f4f4f4;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: auto;
+        background: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1,
+      h2 {
+        color: #333;
+      }
+
+      .toc {
+        background: #e9ecef;
+        padding: 15px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+      }
+
+      .toc a {
+        color: #007bff;
+        text-decoration: none;
+      }
+
+      .toc a:hover {
+        text-decoration: underline;
+      }
+
+      .section {
+        margin-bottom: 30px;
+      }
+
+      .step {
+        margin: 10px 0;
+      }
+
+      .step strong {
+        color: #555;
+      }
+
+      .note {
+        background: #fff3cd;
+        padding: 10px;
+        border-left: 4px solid #ffc107;
+        margin: 10px 0;
+      }
+
+      button,
+      .nav-button {
+        background: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 5px;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+      }
+
+      button:hover,
+      .nav-button:hover {
+        background: #0056b3;
+      }
+
+      .nav-buttons {
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .screenshot {
+        max-width: 100%;
+        height: auto;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin: 10px 0;
+        background-color: #e9ecef;
+      }
+
+      .caption {
+        font-style: italic;
+        color: #666;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="nav-buttons">
+        <a href="http://veasna.com/outlook.php" class="nav-button"
+          >Outlook Tutorial</a
+        >
+        <a href="http://veasna.com/mozilla.php" class="nav-button"
+          >Mozilla Thunderbird Tutorial</a
+        >
+        <a href="http://veasna.com/googleMail.php" class="nav-button"
+          >Gmail Send As Tutorial</a
+        >
+      </div>
+
+      <h1>Gmail Send As Tutorial</h1>
+
+      <div class="toc">
+        <h3>Table of Contents</h3>
+        <ul>
+          <li>
+            <a href="#configure"
+              >Configure Gmail to Send As Another Email Address</a
+            >
+          </li>
+          <li><a href="#edit">Edit or Remove Send As Settings in Gmail</a></li>
+        </ul>
+      </div>
+
+      <div id="configure" class="section">
+        <h2>Configure Gmail to Send As Another Email Address</h2>
+        <p>
+          To configure Gmail to send emails from another email address (Send As
+          feature), follow these steps:
+        </p>
+        <div class="step">
+          <strong>Step 1:</strong> Open your web browser and log in to your
+          Gmail account at
+          <a href="https://mail.google.com" target="_blank">mail.google.com</a>.
+        </div>
+        <div class="step">
+          <div class="caption">
+            Click the gear icon in the top right and select 'See all settings'
+            from the dropdown menu.
+          </div>
+        </div>
+        <div class="step">
+          <strong>Step 3:</strong> Navigate to the
+          <em>Accounts and Import</em> tab.
+        </div>
+        <img src="gmail.png" alt="" />
+        <div class="step">
+          <strong>Step 4:</strong> In the <em>Send mail as</em> section, click
+          <em>Add another email address</em>.
+
+          <div class="caption">
+            Locate the 'Send mail as' section and click 'Add another email
+            address'.
+          </div>
+        </div>
+        <div class="step">
+          <strong>Step 5:</strong> In the popup window, enter the following
+          details:
+          <ul>
+            <li>
+              <em>Name:</em> The name you want to appear in outgoing emails.
+            </li>
+            <li>
+              <em>Email address:</em> The full email address you want to send
+              from (e.g., username@yourdomain.com).
+            </li>
+            <li>
+              Check <em>Treat as an alias</em> if you want replies to go to your
+              primary Gmail address (optional).
+            </li>
+          </ul>
+          Click <em>Next Step</em>.
+        </div>
+        <div class="step">
+          <strong>Step 6:</strong> Enter the SMTP server settings for the email
+          account:
+          <ul>
+            <li>
+              <em>SMTP Server:</em> Find the outgoing server hostname in Site
+              Tools > Email > Accounts, select the email account, go to the
+              kebab menu > Mail Configuration, and check the Manual Settings
+              tab.
+            </li>
+            <li><em>Port:</em> Set to 465 (for SSL/TLS).</li>
+            <li>
+              <em>Username:</em> Your full email address (e.g.,
+              username@yourdomain.com).
+            </li>
+            <li><em>Password:</em> The password for the email account.</li>
+            <li>Select <em>Secured connection using SSL</em>.</li>
+          </ul>
+          Click <em>Add Account</em>.
+          <div class="caption">
+            Enter the SMTP server details in the popup window and click 'Add
+            Account'.
+          </div>
+        </div>
+        <div class="step">
+          <strong>Step 7:</strong> Gmail will send a verification email to the
+          email address you added. Open the verification email (either in Gmail
+          or another email client) and click the verification link, or enter the
+          confirmation code in the Gmail verification popup.
+        </div>
+        <div class="note">
+          <strong>Note:</strong> To verify SMTP settings, go to Site Tools >
+          Email > Accounts, select the email account, and check Mail
+          Configuration > Manual Settings tab.
+        </div>
+        <div class="step">
+          <strong>Step 8:</strong> Once verified, the email address will be
+          added to your Gmail account. When composing an email, you can select
+          the new email address from the <em>From</em> dropdown menu.
+        </div>
+        <button
+          onclick="alert('Send As email address has been added to Gmail!')">
+          Simulate Adding Send As
+        </button>
+      </div>
+
+      <div id="edit" class="section">
+        <h2>Edit or Remove Send As Settings in Gmail</h2>
+        <p>
+          To edit or remove an email address configured for the Send As feature
+          in Gmail, follow these steps:
+        </p>
+        <div class="step">
+          <strong>Step 1:</strong> Log in to your Gmail account at
+          <a href="https://mail.google.com" target="_blank">mail.google.com</a>.
+        </div>
+        <div class="step">
+          <strong>Step 2:</strong> Click the gear icon in the top right corner,
+          then select <em>See all settings</em>.
+        </div>
+        <div class="step">
+          <strong>Step 3:</strong> Go to the <em>Accounts and Import</em> tab.
+        </div>
+        <div class="step">
+          <strong>Step 4:</strong> In the <em>Send mail as</em> section, locate
+          the email address you want to edit or remove.
+          <ul>
+            <li>
+              <strong>To Edit:</strong> Click <em>edit info</em> next to the
+              email address. Update the name or alias settings as needed, then
+              click <em>Save Changes</em>. To update SMTP settings (e.g.,
+              hostname or password), you may need to remove and re-add the email
+              address.
+            </li>
+            <li>
+              <strong>To Remove:</strong> Click <em>delete</em> next to the
+              email address and confirm the removal.
+            </li>
+          </ul>
+          <div class="caption">
+            Click 'edit info' to modify or 'delete' to remove the Send As email
+            address.
+          </div>
+        </div>
+        <div class="step">
+          <strong>Step 5:</strong> If you removed the email address and want to
+          re-add it with updated settings, follow the steps in the "Configure
+          Gmail to Send As Another Email Address" section above.
+        </div>
+        <div class="note">
+          <strong>Note:</strong> Verify the updated SMTP settings in Site Tools
+          > Email > Accounts > Mail Configuration > Manual Settings tab before
+          re-adding the email address.
+        </div>
+        <button
+          onclick="alert('Send As settings updated or removed successfully!')">
+          Simulate Updating/Removing Send As
+        </button>
+      </div>
+    </div>
+
+    <script>
+      // Smooth scrolling for table of contents links
+      document.querySelectorAll(".toc a").forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute("href").substring(1);
+          const targetElement = document.getElementById(targetId);
+          targetElement.scrollIntoView({ behavior: "smooth" });
+        });
+      });
+    </script>
+  </body>
+</html>
